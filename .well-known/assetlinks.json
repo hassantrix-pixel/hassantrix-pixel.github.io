@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.hhassn.trix",
+    "sha256_cert_fingerprints": [
+      "14:29:D5:FE:1B:05:22:01:D9:89:AF:AC:8F:46:AF:ED:AC:EA:97:92:1C:D1:5C:86:21:65:21:EE:FD:13:72:EE"
+    ]
+  }
+}]
