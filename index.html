@@ -1,18 +1,218 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-    <title>Trix Game - Join Room</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة تريكس - الانضمام للغرفة</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background: #121212; color: white; }
-        .btn { padding: 15px 30px; background: #4CAF50; color: white; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .message {
+            background: rgba(76, 175, 80, 0.2);
+            border: 1px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .warning {
+            background: rgba(255, 152, 0, 0.2);
+            border: 1px solid #FF9800;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            min-width: 200px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #FF9800, #F57C00);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.6);
+        }
+        
+        .btn-download {
+            background: linear-gradient(45deg, #2196F3, #1976D2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.6);
+        }
+        
+        .instructions {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+        
+        .step {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 10px;
+            margin: 5px 0;
+            text-align: right;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .btn {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>لعبة تريكس - Trix</h1>
-    <p>لقد تمت دعوتك للانضمام إلى غرفة لعب!</p>
-    <p>إذا لم يفتح التطبيق تلقائياً، تأكد من تثبيته.</p>
-    <a href="https://drive.google.com/uc?export=download&id=1dH3zDZ5aGJtZCGm48Ova43lqdilp8Eu_" class="btn">تحميل اللعبة</a>
+    <div class="container">
+        <div class="logo">تريكس</div>
+        <div class="subtitle">دعوة للانضمام للغرفة</div>
+        
+        <div class="message">
+            <strong>🎮 تمت دعوتك للانضمام إلى غرفة لعب!</strong><br>
+            إذا لم يفتح التطبيق تلقائياً، اضغط على الزر أدناه.
+        </div>
+        
+        <div class="warning">
+            ⚠️ <strong>ملاحظة هامة:</strong><br>
+            إذا واجهت مشكلة في فتح الروابط، تأكد من تفعيل "فتح الروابط المدعومة" من إعدادات التطبيق.
+        </div>
+        
+        <!-- زر فتح التطبيق مباشرة -->
+        <a href="intent://trix-game/#join" class="btn btn-primary">
+            🚀 فتح لعبة تريكس
+        </a>
+        
+        <!-- زر التحميل -->
+        <a href="https://drive.google.com/uc?export=download&id=1dH3zDZ5aGJtZCGm48Ova43lqdilp8Eu_" class="btn btn-download">
+            📱 تحميل التطبيق
+        </a>
+        
+        <!-- زر الإعدادات -->
+        <a href="intent://trix-game/#settings" class="btn btn-secondary">
+            ⚙️ فتح إعدادات التطبيق
+        </a>
+        
+        <div class="instructions">
+            <div class="step">
+                <strong>📱 الخطوة 1:</strong> تأكد من تثبيت تطبيق تريكس
+            </div>
+            <div class="step">
+                <strong>🔗 الخطوة 2:</strong> اضغط على "فتح لعبة تريكس"
+            </div>
+            <div class="step">
+                <strong>⚙️ الخطوة 3:</strong> إذا لم يعمل، اضغط على "فتح إعدادات التطبيق" وفعّل الروابط
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // محاولة فتح التطبيق تلقائياً بعد 3 ثواني
+        setTimeout(function() {
+            window.location.href = 'intent://trix-game/#join';
+        }, 3000);
+        
+        // تتبع النقرات للأزرار
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const action = this.textContent;
+                console.log('User clicked:', action);
+                
+                // إرسال إحصائيات (اختياري)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'button_click', {
+                        'button_text': action,
+                        'page': 'invite_fallback'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
