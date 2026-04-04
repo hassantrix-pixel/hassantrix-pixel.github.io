@@ -33,7 +33,6 @@
             margin-bottom: 20px;
         }
         .download-btn {
-            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
             color: white;
             padding: 15px 30px;
             border: none;
@@ -44,16 +43,46 @@
             display: inline-block;
             margin: 10px 0;
             transition: all 0.3s ease;
+            width: 100%;
+            max-width: 280px;
         }
         .download-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .github-btn {
+            background: linear-gradient(45deg, #24292e, #40474e);
+        }
+        .github-btn:hover {
+            background: linear-gradient(45deg, #40474e, #24292e);
+        }
+        .drive-btn {
+            background: linear-gradient(45deg, #4285f4, #34a853);
+        }
+        .drive-btn:hover {
+            background: linear-gradient(45deg, #34a853, #4285f4);
+        }
+        .play-btn {
+            background: linear-gradient(45deg, #607d8b, #455a64);
+        }
+        .play-btn:hover {
+            background: linear-gradient(45deg, #455a64, #607d8b);
         }
         .version-info {
             background: #f8f9fa;
             padding: 15px;
             border-radius: 10px;
             margin: 20px 0;
+        }
+        .recommended {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -67,19 +96,27 @@
             <p>✨ ميزات جديدة وإصلاحات هامة</p>
         </div>
         
-        <a href="https://drive.google.com/uc?export=download&id=1dH3zDZ5aGJtZCGm48Ova43lqdilp8Eu_" 
-           class="download-btn" 
+        <a href="https://github.com/hassantrix-pixel/hassantrix-pixel.github.io/releases/download/v1.0.0/Trix.apk" 
+           class="download-btn github-btn" 
            target="_blank">
-            ⬇️ تحديث الآن
+            ⬇️ تحديث الآن (موصى به)
+            <span class="recommended">الأفضل</span>
+        </a>
+        
+        <a href="https://drive.google.com/uc?export=download&id=1dH3zDZ5aGJtZCGm48Ova43lqdilp8Eu_" 
+           class="download-btn drive-btn" 
+           target="_blank">
+            📁 تحديث من Google Drive
         </a>
         
         <a href="https://play.google.com/store/apps/details?id=com.hhassn.trix" 
-           class="download-btn" 
+           class="download-btn play-btn" 
            target="_blank">
             🏪 تحديث من Google Play
         </a>
         
-        <p style="margin-top: 30px; color: #666;">
+        <p style="margin-top: 30px; color: #666; font-size: 14px;">
+            <strong>💡 ملاحظة:</strong> التحميل من GitHub هو الخيار الأفضل والأسرع<br>
             شكراً لاستخدامك لعبة تريكس! 🎯
         </p>
     </div>
