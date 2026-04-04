@@ -70,18 +70,33 @@
             font-size: 0.9rem;
         }
         
+        .download-section {
+            background: rgba(33, 150, 243, 0.1);
+            border: 1px solid rgba(33, 150, 243, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .download-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #64B5F6;
+        }
+        
         .btn {
             display: inline-block;
             padding: 15px 30px;
-            margin: 10px;
+            margin: 8px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            min-width: 200px;
+            min-width: 180px;
+            position: relative;
         }
         
         .btn-primary {
@@ -106,15 +121,49 @@
             box-shadow: 0 6px 20px rgba(255, 152, 0, 0.6);
         }
         
-        .btn-download {
-            background: linear-gradient(45deg, #2196F3, #1976D2);
+        .btn-github {
+            background: linear-gradient(45deg, #24292e, #40474e);
             color: white;
-            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+            box-shadow: 0 4px 15px rgba(36, 41, 46, 0.4);
         }
         
-        .btn-download:hover {
+        .btn-github:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.6);
+            box-shadow: 0 6px 20px rgba(36, 41, 46, 0.6);
+        }
+        
+        .btn-drive {
+            background: linear-gradient(45deg, #4285f4, #34a853);
+            color: white;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.4);
+        }
+        
+        .btn-drive:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(66, 133, 244, 0.6);
+        }
+        
+        .btn-play {
+            background: linear-gradient(45deg, #607d8b, #455a64);
+            color: white;
+            box-shadow: 0 4px 15px rgba(96, 125, 139, 0.4);
+        }
+        
+        .btn-play:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(96, 125, 139, 0.6);
+        }
+        
+        .recommended {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: bold;
+            position: absolute;
+            top: -8px;
+            right: -8px;
         }
         
         .instructions {
@@ -145,6 +194,14 @@
             .btn {
                 width: 100%;
                 margin: 5px 0;
+                min-width: auto;
+            }
+            
+            .recommended {
+                position: static;
+                display: inline-block;
+                margin-top: 5px;
+                margin-right: 5px;
             }
         }
     </style>
@@ -169,25 +226,53 @@
             🚀 فتح لعبة تريكس
         </a>
         
-        <!-- زر التحميل -->
-        <a href="https://drive.google.com/uc?export=download&id=1dH3zDZ5aGJtZCGm48Ova43lqdilp8Eu_" class="btn btn-download">
-            📱 تحميل التطبيق
-        </a>
-        
         <!-- زر الإعدادات -->
         <a href="trixgame://settings" class="btn btn-secondary">
             ⚙️ فتح إعدادات التطبيق
         </a>
         
+        <!-- قسم التحميل -->
+        <div class="download-section">
+            <div class="download-title">
+                📱 <strong>تحميل التطبيق</strong>
+            </div>
+            
+            <!-- GitHub (موصى به) -->
+            <a href="https://github.com/hassantrix-pixel/hassantrix-pixel.github.io/releases/download/v1.0.0/Trix.apk" 
+               class="btn btn-github" 
+               target="_blank"
+               style="position: relative;">
+                ⬇️ تحميل (موصى به)
+                <span class="recommended">الأفضل</span>
+            </a>
+            
+            <!-- Google Drive -->
+            <a href="https://drive.google.com/uc?export=download&id=1dH3zDZ5aGJtZCGm48Ova43lqdilp8Eu_" 
+               class="btn btn-drive" 
+               target="_blank">
+                📁 تحميل من Drive
+            </a>
+            
+            <!-- Google Play -->
+            <a href="https://play.google.com/store/apps/details?id=com.hhassn.trix" 
+               class="btn btn-play" 
+               target="_blank">
+                🏪 Google Play
+            </a>
+        </div>
+        
         <div class="instructions">
             <div class="step">
-                <strong>📱 الخطوة 1:</strong> تأكد من تثبيت تطبيق تريكس
+                <strong>📱 الخطوة 1:</strong> إذا كان التطبيق مثبتاً، سيفتح تلقائياً
             </div>
             <div class="step">
-                <strong>🔗 الخطوة 2:</strong اضغط على "فتح لعبة تريكس"
+                <strong>🔗 الخطوة 2:</strong> إذا لم يفتح، اضغط على "فتح لعبة تريكس"
             </div>
             <div class="step">
-                <strong>⚙️ الخطوة 3:</strong> إذا لم يعمل، اضغط على "فتح إعدادات التطبيق" وفعّل الروابط
+                <strong>⬇️ الخطوة 3:</strong> إذا لم يكن التطبيق مثبتاً، حمّله من الروابط أدناه
+            </div>
+            <div class="step">
+                <strong>⚙️ الخطوة 4:</strong> إذا واجهت مشكلة، اضغط على "فتح إعدادات التطبيق"
             </div>
         </div>
     </div>
@@ -212,6 +297,29 @@
                     });
                 }
             });
+        });
+        
+        // التحقق مما إذا كان التطبيق مثبتاً
+        function checkAppInstalled() {
+            const startTime = Date.now();
+            const timeout = 2500;
+            
+            // محاولة فتح التطبيق
+            window.location.href = 'trixgame://invite';
+            
+            // التحقق مما إذا تم فتح التطبيق
+            setTimeout(function() {
+                if (Date.now() - startTime < timeout + 100) {
+                    // التطبيق لم يفتح، إظهار قسم التحميل
+                    console.log('App not installed, showing download options');
+                }
+            }, timeout);
+        }
+        
+        // بدء التحقق بعد تحميل الصفحة
+        window.addEventListener('load', function() {
+            // الانتظار قليلاً قبل التحقق
+            setTimeout(checkAppInstalled, 1000);
         });
     </script>
 </body>
