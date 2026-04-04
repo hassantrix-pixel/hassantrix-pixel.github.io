@@ -10,6 +10,12 @@ bidmachine.io,1,DIRECT
 
 bidmachine.io,466,DIRECT
 
+#Bidon (مطلوب لـ SDK 4.0.0)
+org.bidon, bidmachine-adapter, DIRECT
+
+#Unity Ads Level Play (مطلوب لـ SDK 4.0.0)
+unity.com,1004715,RESELLER,96cabb5fbdde37a7
+
 #AdMob
 
 #Replace the Publisher_ID below with your Admob Publisher ID
