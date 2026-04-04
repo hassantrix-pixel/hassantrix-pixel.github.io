@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تحديث لعبة تريكس</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -14,6 +20,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            direction: rtl;
         }
         .container {
             background: white;
@@ -24,6 +31,8 @@
             max-width: 420px;
             width: 100%;
             backdrop-filter: blur(10px);
+            margin: 0 auto;
+            position: relative;
         }
         .logo {
             font-size: 64px;
@@ -52,6 +61,10 @@
         
         .download-section {
             margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         
         .download-btn {
@@ -66,12 +79,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 12px auto;
+            margin: 12px 0;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             width: 100%;
-            max-width: 300px;
+            max-width: 280px;
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
         
         .download-btn::before {
@@ -157,10 +171,14 @@
             border-radius: 20px;
             font-size: 11px;
             font-weight: bold;
-            margin-right: 10px;
+            margin-left: 10px;
             display: inline-block;
             animation: pulse 2s infinite;
             box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            z-index: 10;
         }
         
         @keyframes pulse {
