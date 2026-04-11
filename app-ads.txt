@@ -1,6 +1,7 @@
-# Updated 05.04.2026 for Trix App
-# Official Appodeal Authorization
+# Google AdMob Authorization for Trix App
+google.com, pub-1633434883626198, DIRECT, f08c47fec0942fa0
 
+# Official Appodeal Authorization
 appodeal.com, 259781, DIRECT
 bidmachine.io, 1, DIRECT
 bidmachine.io, 466, DIRECT
@@ -184,4 +185,3 @@ adwmg.com, 101215, RESELLER, c9688a22012618e7
 adx-dra.op.hicloud.com, PUB_HW_1003, RESELLER
 adx-dre.op.hicloud.com, PUB_HW_1003, RESELLER
 adx-drru.op.hicloud.com, PUB_HW_1003, RESELLER
-# Verification End
