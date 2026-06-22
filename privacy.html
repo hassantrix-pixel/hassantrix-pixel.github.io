@@ -5,37 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Trix</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        h1 { color: #333; }
-        h2 { color: #555; margin-top: 30px; }
-        ul { padding-left: 20px; }
-        .contact-box { background: #f9f9f9; padding: 15px; border-left: 5px solid #4CAF50; margin-top: 20px; }
+        :root {
+            --primary-color: #003366;
+            --accent-color: #D4AF37;
+            --text-color: #2c3e50;
+            --bg-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-top: 6px solid var(--accent-color);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .last-updated {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '◈';
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        p { margin-bottom: 20px; }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: square;
+        }
+
+        li { margin-bottom: 10px; }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover { text-decoration: underline; }
+
+        .contact-box {
+            background: #fdfaf0;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #f1e4bc;
+            margin-top: 40px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #bdc3c7;
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.6em; }
+        }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy for Trix</h1>
-    <p>Last updated: April 2026</p>
-    
-    <p>We care about your privacy. This app uses third-party services that may collect information used to identify you to provide a better user experience and display relevant advertisements.</p>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: April 2026</p>
+        </header>
+        
+        <p>Your privacy is important to us. This Privacy Policy explains how <strong>Trix</strong> collects, uses, and protects your information when you use our mobile application.</p>
 
-    <h2>1. Information Collection and Use</h2>
-    <p>For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to Advertising ID. The information that we request will be retained on your device and is not collected by us in any way.</p>
-
-    <h2>2. Third-Party Service Providers</h2>
-    <p>The app does use third-party services that may collect information used to identify you. Link to privacy policy of third-party service providers used by the app:</p>
-    <ul>
-        <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-        <li><a href="https://appodeal.com/privacy-policy/" target="_blank">Appodeal</a></li>
-    </ul>
-
-    <h2>3. Contact Us</h2>
-    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us through our official support emails:</p>
-    
-    <div class="contact-box">
+        <h2>1. Information Collection and Use</h2>
+        <p>For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to:</p>
         <ul>
-            <li><strong>reignmire8@gmail.com</strong></li>
-            <li><strong>hassancominfosys@gmail.com</strong></li>
+            <li><strong>Advertising Identifiers:</strong> Used by ad networks to show relevant ads.</li>
+            <li><strong>Usage Statistics:</strong> Anonymized data about game progress and AI interactions to improve game performance.</li>
+            <li><strong>Device Information:</strong> Model, OS version, and language settings.</li>
         </ul>
+
+        <h2>2. Third-Party Service Providers</h2>
+        <p>The app utilizes reliable third-party services that may collect information to identify you according to their own privacy policies:</p>
+        <ul>
+            <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
+            <li><a href="https://appodeal.com/privacy-policy/" target="_blank">Appodeal (Advertising & Mediation)</a></li>
+            <li><a href="https://supabase.com/privacy" target="_blank">Supabase (Backend & Multiplayer)</a></li>
+        </ul>
+
+        <h2>3. Data Security</h2>
+        <p>We value your trust in providing us your information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet is 100% secure and reliable.</p>
+
+        <h2>4. Children’s Privacy</h2>
+        <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
+
+        <div class="contact-box">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or suggestions regarding our Privacy Policy, please contact our official support channels:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:reignmire8@gmail.com">reignmire8@gmail.com</a></li>
+                <li><strong>Support:</strong> <a href="mailto:hassancominfosys@gmail.com">hassancominfosys@gmail.com</a></li>
+                <li><strong>Facebook:</strong> <a href="https://www.facebook.com/SmartTrixPro" target="_blank">Smart Trix Pro Official</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            &copy; 2026 Trix Game Studio. All rights reserved.
+        </footer>
     </div>
 </body>
 </html>
